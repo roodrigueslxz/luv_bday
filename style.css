@@ -137,6 +137,7 @@ h3 {
     #cake {
         width: 250px;
         max-width: 80%;
+        left: 10px;
     }
 
     #carta {
