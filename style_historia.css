@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "trip-sans";
+    src: url("fonts/trip-sans.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "birds_of_paradise";
+    src: url("fonts/birds_of_paradise.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("papertexture.png");
+    background-size: 1000px;
+    background-repeat: repeat;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(143, 106, 167, .75);
+    transition: background-color 1.5s ease;
+    z-index: -1;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 50px 20px;
+}
+
+h1 {
+    font-family: "birds_of_paradise";
+    font-size: 90px;
+    font-weight: 200;
+    color: #fbf5ff;
+    margin: 40px 0 25px;
+    text-align: center;
+    filter: drop-shadow(2px 2px 0 rgba(23, 18, 26, .6));
+}
+
+.texto {
+    max-width: 900px;
+    width: 100%;
+    color: #fbf5ff;
+    font-family: "trip-sans";
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justify;
+    text-shadow: 1px 1px 0 rgba(23, 18, 26, .65);
+}
+
+.texto p {
+    margin: 0 0 30px;
+}
+
+.capitulo {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s, transform 1s;
+}
+
+.capitulo.show {
+    opacity: 1;
+    transform: none;
+}
+
+.characters,
+.eu-antes-de-voce,
+.quando-nos-conhecemos,
+.quando-comecei-a-gostar-de-voce,
+.quando-percebi-que-estava-apaixonada,
+.memorias-que-alteram-a-quimica-do-meu-cerebro,
+.celebrando-o-dom-da-sua-vida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.memorias-que-alteram-a-quimica-do-meu-cerebro{
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.foto {
+    position: relative;
+    width: 250px;
+    border: 12px solid #fbf5ff;
+    box-shadow: 5px 5px 15px rgba(23, 18, 26, .35);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.foto-esquerda,
+.eu-antesdevoce-1,
+.quando-nos-conhecemos-1,
+.quando-comecei-a-gostar-de-voce-1,
+.quando-percebi-que-estava-apaixonada-1,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-1,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-4,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-7,
+.celebrando-o-dom-da-sua-vida-1 {
+    transform: rotate(-6deg);
+}
+
+.foto-centro,
+.eu-antesdevoce-2,
+.quando-nos-conhecemos-2,
+.quando-comecei-a-gostar-de-voce-2,
+.quando-percebi-que-estava-apaixonada-2,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-2,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-5,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-8,
+.celebrando-o-dom-da-sua-vida-2 {
+    transform: rotate(3deg);
+}
+
+.foto-direita,
+.eu-antesdevoce-3,
+.quando-nos-conhecemos-3,
+.quando-comecei-a-gostar-de-voce-3,
+.quando-percebi-que-estava-apaixonada-3,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-3,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-6,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-9,
+.celebrando-o-dom-da-sua-vida-3 {
+    transform: rotate(8deg);
+}
+
+.foto:hover {
+    box-shadow: 10px 10px 25px rgba(23, 18, 26, .45);
+}
+
+.foto-esquerda:hover,
+.eu-antesdevoce-1:hover,
+.quando-nos-conhecemos-1:hover,
+.quando-comecei-a-gostar-de-voce-1:hover,
+.quando-percebi-que-estava-apaixonada-1:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-1:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-4:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-7:hover,
+.celebrando-o-dom-da-sua-vida-1:hover {
+    transform: rotate(-6deg) scale(1.08) translateY(-8px);
+}
+
+.foto-centro:hover,
+.eu-antesdevoce-2:hover,
+.quando-nos-conhecemos-2:hover,
+.quando-comecei-a-gostar-de-voce-2:hover,
+.quando-percebi-que-estava-apaixonada-2:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-2:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-5:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-8:hover,
+.celebrando-o-dom-da-sua-vida-2:hover {
+    transform: rotate(3deg) scale(1.08) translateY(-8px);
+}
+
+.foto-direita:hover,
+.eu-antesdevoce-3:hover,
+.quando-nos-conhecemos-3:hover,
+.quando-comecei-a-gostar-de-voce-3:hover,
+.quando-percebi-que-estava-apaixonada-3:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-3:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-6:hover,
+.memorias-que-alteram-a-quimica-do-meu-cerebro-9:hover,
+.celebrando-o-dom-da-sua-vida-3:hover {
+    transform: rotate(8deg) scale(1.08) translateY(-8px);
+}
+
+@media (max-width:900px) {
+    h1 {
+        font-size: 60px;
+    }
+
+    .texto {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    section {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .texto {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .foto {
+        width: 200px;
+    }
+}
