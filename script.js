@@ -22,6 +22,7 @@ let us = document.getElementById("us");
 let char1 = document.getElementById("sawako_kazehaya");
 let char2 = document.getElementById("tanjiro_kanao");
 let char3 = document.getElementById("vegeta_bulma");
+let historia = document.getElementById("historia");
 
 cake.onclick = clicarBolo;
 
@@ -55,35 +56,40 @@ function clicarBolo() {
 
             }, 200);
 
-                setTimeout(() => {
-                    carta.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center"
-                    });
-                }, 900);
+            setTimeout(() => {
+                carta.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 900);
 
-            setTimeout (() => {
+            setTimeout(() => {
                 carta.classList.remove("hidden");
                 carta.classList.add("show");
 
                 us.classList.remove("hidden");
                 us.classList.add("show");
 
-                setTimeout (() => {
+                setTimeout(() => {
                     char1.classList.remove("hidden");
                     char1.classList.add("show");
                 }, 200);
 
-                setTimeout (() => {
+                setTimeout(() => {
                     char2.classList.remove("hidden");
                     char2.classList.add("show");
                 }, 400);
 
-                setTimeout (() => {
+                setTimeout(() => {
                     char3.classList.remove("hidden");
                     char3.classList.add("show");
                 }, 600);
-            }, 1000);   
+
+                setTimeout(() => {
+                    historia.classList.remove("hidden");
+                    historia.classList.add("show");
+                }, 1400);
+            }, 1000);
         }
     }, 150);
 }
